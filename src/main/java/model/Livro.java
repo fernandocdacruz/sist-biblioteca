@@ -4,13 +4,13 @@ public class Livro {
 	
 	private String titulo;
 	private String autor;
-	private String ano_de_publicacao;
+	private int ano_de_publicacao;
 	private String isbn;
 	
 	public Livro() {
 	}
 
-	public Livro(String titulo, String autor, String ano_de_publicacao, String isbn) {
+	public Livro(String titulo, String autor, int ano_de_publicacao, String isbn) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.ano_de_publicacao = ano_de_publicacao;
@@ -33,11 +33,11 @@ public class Livro {
 		this.autor = autor;
 	}
 
-	public String getAno_de_publicacao() {
+	public int getAno_de_publicacao() {
 		return ano_de_publicacao;
 	}
 
-	public void setAno_de_publicacao(String ano_de_publicacao) {
+	public void setAno_de_publicacao(int ano_de_publicacao) {
 		this.ano_de_publicacao = ano_de_publicacao;
 	}
 

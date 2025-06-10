@@ -1,11 +1,17 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.Livro;
 
 /**
  * Servlet implementation class LivroServlet
@@ -14,28 +20,25 @@ import javax.servlet.http.HttpServletResponse;
 public class LivroServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LivroServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	private static List<Livro> livros = new ArrayList<>();
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String titulo = request.getParameter("titulo");
+		String autor = request.getParameter("autor");
+		String anoPublicacao = request.getParameter("anoPublicacao");
+		String isbn = request.getParameter("isbn");
+		
+		livros.add(new Livro(titulo, autor, Integer.parseInt(anoPublicacao), isbn));
+		
+		String contextPath = request.getContextPath();
+		response.sendRedirect(contextPath + "/index.html");
+		
+	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setAttribute("livros", livros);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/view/listarLivros.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }

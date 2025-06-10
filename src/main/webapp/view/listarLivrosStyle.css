@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/*
+    Este CSS foi criado para a página listarLivros.jsp.
+    Ele segue o mesmo padrão de estilo minimalista e as cores dos arquivos
+    index.css e cadastrarLivros.css fornecidos.
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    /* Alinha ao topo para que a lista possa rolar se for muito longa */
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px; /* Adiciona um espaço no topo */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#container {
+    border: 2px solid black;
+    padding: 30px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ajustado para acomodar melhor a lista de livros */
+    width: 500px;
+    max-width: 90%; /* Garante que seja responsivo */
+}
+
+#container h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Estilos para a lista de livros (ul) */
+ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove padding padrão */
+    margin: 20px 0; /* Margem acima e abaixo da lista */
+    text-align: left; /* Alinha o texto dos itens à esquerda */
+}
+
+/* Estilos para cada item da lista (li) */
+li {
+    background-color: #f9f9f9; /* Fundo cinza bem claro para cada item */
+    border: 1px solid #ddd; /* Borda leve para separar os itens */
+    border-radius: 4px; /* Cantos arredondados como nos inputs/botões */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
+    line-height: 1.6; /* Melhora a legibilidade do texto interno */
+    color: #555; /* Cor do texto principal */
+    font-size: 0.95em; /* Tamanho da fonte ligeiramente menor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para dar profundidade */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efeito suave no hover */
+}
+
+/* Efeito ao passar o mouse sobre um item da lista */
+li:hover {
+    transform: translateY(-2px); /* Levanta o item um pouco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumenta a sombra no hover */
+}
+
+/* Estilo para os rótulos em negrito dentro dos itens da lista */
+li strong {
+    color: #333; /* Cor mais escura para os títulos dos campos (Título, Autor, etc.) */
+}
+
+/* Estilo para a mensagem de "Nenhum livro cadastrado" */
+p {
+    color: #666; /* Cor cinza escuro */
+    margin-top: 20px;
+    font-style: italic; /* Em itálico para mensagens informativas */
+}
+
+/* Estilos dos botões (reutilizando as classes do index e cadastrar) */
+.botao {
+    display: inline-block;
+    background-color: #a0a0a0; /* Cor padrão do botão */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-voltar {
+    background-color: #6c757d; /* Cor específica para o botão de voltar */
+}
+
+.botao:hover {
+    background-color: #808080; /* Cor no hover */
+}
+
+.botao-voltar:hover {
+    background-color: #5a6268
+}

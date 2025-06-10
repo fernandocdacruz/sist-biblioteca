@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Livros</title>
-    <link rel="stylesheet" href="../css/cadastrarLivrosStyle.css">
+    <link rel="stylesheet" href="cadastrarLivrosStyle.css">
 </head>
 <body>
     <div id="container">
         <h1>Cadastro de Livros</h1>
-        <form action="#" method="POST">
+        <form action="../LivroServlet" method="POST">
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" required>
 
@@ -20,7 +20,7 @@
             <input type="number" id="anoPublicacao" name="anoPublicacao" min="1000" max="2100" required>
 
             <label for="isbn">ISBN:</label>
-            <input type="text" id="isbn" name="isbn" required>
+            <input type="text" id="isbn" name="isbn" required maxlength="13">
 
             <div class="botoes-form">
                 <button type="submit" class="botao">Cadastrar</button>
