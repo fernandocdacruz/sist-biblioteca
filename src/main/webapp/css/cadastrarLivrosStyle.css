@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#container {
+    border: 2px solid black;
+    padding: 30px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+#container h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+#container form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    text-align: left;
+}
+
+#container form input[type="text"],
+#container form input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/* Novo estilo para os botões */
+.botoes-form {
+    display: flex; /* Usamos flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 25px; /* Espaço acima do grupo de botões */
+}
+
+.botao {
+    display: inline-block; /* Continua como inline-block para padding/margin */
+    background-color: #a0a0a0;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-voltar {
+    background-color: #6c757d; /* Uma cor um pouco diferente para o botão voltar */
+}
+
+.botao:hover {
+    background-color: #808080;
+}
+
+.botao-voltar:hover {
+    background-color: #5a6268;
+}
