@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*
+    Este arquivo CSS é responsável por estilizar a página de erro (erro.jsp).
+    Ele adota o padrão visual estabelecido nos outros arquivos CSS do projeto,
+    garantindo consistência de cores, fontes e layout para o corpo da página,
+    o container principal e os botões, enquanto destaca a mensagem de erro com tons de vermelho.
+*/
+
+/* O corpo da página segue o padrão centralizado e com fundo cinza claro */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo verticalmente na página de erro */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo padrão do projeto */
+}
+
+/* O container principal, com borda, sombra e cantos arredondados, adaptado para a mensagem de erro */
+#conteinerPrincipal { /* ID correspondente ao seu JSP */
+    border: 2px solid black;
+    padding: 30px;
+    background-color: #fff; /* Fundo branco do container */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Largura ajustada para a exibição da mensagem de erro */
+    width: 400px;
+    max-width: 90%; /* Garante responsividade */
+}
+
+/* Estilo para o título principal da página de erro */
+h1 {
+    color: #cc0000; /* Vermelho forte para indicar a natureza de erro */
+    margin-bottom: 25px;
+    font-size: 1.8em; /* Tamanho consistente com outros títulos H1 do projeto */
+}
+
+/* Estilo para o parágrafo que exibe a mensagem de erro */
+p.mensagem-erro { /* Classe correspondente ao seu JSP */
+    color: #660000; /* Um tom de vermelho mais escuro para o texto da mensagem */
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ffcccc; /* Borda sutilmente avermelhada */
+    background-color: #ffe0e0; /* Fundo muito claro avermelhado para o destaque visual */
+    border-radius: 5px; /* Cantos arredondados, seguindo o padrão */
+}
+
+/* Estilos para a área que contém os botões, mantendo o padrão de layout */
+.area-botoes { /* Classe correspondente ao seu JSP */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 25px; /* Margem superior para separar do conteúdo acima */
+}
+
+/* Estilos de botões (reutilizando as classes padrão do projeto) */
+.botao {
+    display: inline-block;
+    background-color: #a0a0a0; /* Cor padrão do botão (cinza) */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none; /* Remove sublinhado de links */
+    border: none; /* Remove borda padrão do botão */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+}

@@ -17,7 +17,7 @@
 
             if (livros == null || livros.isEmpty()) {
         %>
-            <p>Nenhum livro cadastrado ainda.</p>
+            <p class="info-message">Nenhum livro cadastrado ainda.</p>
         <%
             } else {
         %>
@@ -39,6 +39,20 @@
             }
         %>
 
+        <br>
+
+        <div class="form-excluir">
+            <h2>Excluir Livro por ISBN</h2>
+            <form action="<%= request.getContextPath() %>/LivroServlet" method="POST">
+                <input type="hidden" name="acao" value="excluirLivro">
+                
+                <div class="input-e-botao">
+                    <label for="isbnExcluir">ISBN:</label>
+                    <input type="text" id="isbnExcluir" name="isbnExcluir" placeholder="Digite o ISBN" required maxlength="13">
+                    <button type="submit" class="botao botao-excluir">Excluir</button>
+                </div>
+                </form>
+        </div>
         <br>
         <div class="botoes-listagem">
              <a href="<%= request.getContextPath() %>/index.html" class="botao botao-voltar">Voltar para o Início</a>
